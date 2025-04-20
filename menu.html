@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C3639;
+            --accent: #A27B5C;
+            --light: #DCD7C9;
+            --dark: #3F4E4F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .menu-images {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-image {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            display: block;
+            margin: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .menu-images {
+                margin: 0;
+            }
+
+            .menu-image {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-btn">←</a>
+        <div>Menu</div>
+    </header>
+
+    <div class="menu-images">
+        <img src="1.png" alt="Menu Page 1" class="menu-image">
+        <img src="2.png" alt="Menu Page 2" class="menu-image">
+        <img src="3.png" alt="Menu Page 3" class="menu-image">
+        <img src="4.png" alt="Menu Page 4" class="menu-image">
+        <img src="5.png" alt="Menu Page 5" class="menu-image">
+    </div>
+</body>
+</html>

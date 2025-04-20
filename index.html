@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sereno Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C3639;
+            --accent: #A27B5C;
+            --light: #DCD7C9;
+            --dark: #3F4E4F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        /* Update hero styles */
+        .hero {
+            height: 70vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .menu-btn {
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+            font-size: 32px;
+        }
+
+        .ambiance-slider {
+            width: 100%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            display: flex;
+            gap: 20px;
+            padding-bottom: 15px;
+        }
+
+        .ambiance-slide {
+            flex: 0 0 90%;
+            scroll-snap-align: center;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .ambiance-slide img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .menu-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px hwb(102 9% 16%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-item-name {
+            font-weight: 500;
+        }
+
+        .menu-item-price {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .contact-info {
+            background: var(--light);
+            padding: 30px 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .map {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .review-btn {
+            background: #4285f4;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            display: block;
+            margin: 25px auto 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+        }
+
+        .review-btn:hover {
+            background: #3367d6;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(66, 133, 244, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Sereno Cafe</div>
+        <p>Est. 2024</p>
+    </header>
+
+    <!-- Update hero section HTML -->
+    <section class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="MAINvd.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to Sereno Cafe</h1>
+            <p>Experience the finest coffee and cuisine</p>
+            <div class="button-group">
+                <button class="menu-btn" onclick="window.location.href='food.html'">Food</button>
+                <button class="menu-btn" onclick="window.location.href='menu.html'">Drinks</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Our Ambiance</h2>
+        <div class="ambiance-slider">
+            <div class="ambiance-slide">
+                <img src="photo.jpg" alt="Interior">
+            </div>
+            <div class="ambiance-slide">
+                <img src="photo1.jpg" alt="Seating">
+            </div>
+            <div class="ambiance-slide">
+                <img src="IMG_9911.jpg" alt="Bar">
+            </div>
+            <div class="ambiance-slide">
+              <img src="IMG_9911.jpg" alt="Ba">
+          </div>
+          </div>
+          
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Menu Highlights</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <span class="menu-item-name">Classic Cold Coffe</span>
+                <span class="menu-item-price">₹149</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-item-name">Signiture Pasta</span>
+                <span class="menu-item-price">₹279</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-item-name">Lotus Biscoff </span>
+                <span class="menu-item-price">₹249</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Find Us</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📍</span>
+                <p>Shamirpet Rd, Thumkunta Village, Secunderabad, Telangana 500078</p>
+            </div>
+            <div class="contact-item">
+                <span>📞</span>
+                <p>7799118835</p>
+            </div>
+            <div class="contact-item">
+                <span>⏰</span>
+                <p>Mon-Sun: 10:00 AM - 12:00 AM</p>
+            </div>
+            <button class="review-btn" onclick="window.open('https://g.page/r/CaysLqjJLkacEBM/review')">
+              ⭐ Write a Review
+          </button>
+        </div>
+        
+    </section>
+</body>
+</html>

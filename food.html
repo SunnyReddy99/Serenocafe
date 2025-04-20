@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C3639;
+            --accent: #A27B5C;
+            --light: #DCD7C9;
+            --dark: #3F4E4F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .menu-images {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-image {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            display: block;
+            margin: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .menu-images {
+                margin: 0;
+            }
+
+            .menu-image {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-btn">←</a>
+        <div>Food</div>
+    </header>
+
+    <div class="menu-images">
+        <img src="01.png" alt="Menu Page 1" class="menu-image">
+        <img src="02.png" alt="Menu Page 2" class="menu-image">
+        <img src="03.png" alt="Menu Page 3" class="menu-image">
+        <img src="04.png" alt="Menu Page 4" class="menu-image">
+        <img src="05.png" alt="Menu Page 5" class="menu-image">
+        <img src="6.png" alt="Menu Page 6" class="menu-image">
+        <img src="7.png" alt="Menu Page 7" class="menu-image">
+        <img src="8.png" alt="Menu Page 8" class="menu-image">
+        <img src="9.png" alt="Menu Page 9" class="menu-image">
+        <img src="10.png" alt="Menu Page 10" class="menu-image">
+        <img src="11.png" alt="Menu Page 11" class="menu-image">
+       
+       
+
+    </div>
+</body>
+</html>
